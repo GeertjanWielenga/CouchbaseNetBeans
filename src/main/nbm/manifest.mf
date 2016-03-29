@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Layer: com/mycompany/snhfc/layer.xml
+OpenIDE-Module-Localizing-Bundle: com/mycompany/snhfc/Bundle.properties
+

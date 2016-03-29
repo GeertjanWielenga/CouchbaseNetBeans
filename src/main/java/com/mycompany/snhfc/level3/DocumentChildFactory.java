@@ -6,7 +6,7 @@ import org.openide.nodes.ChildFactory;
 import org.openide.nodes.Node;
 import org.openide.util.Exceptions;
 
-public class Level3ChildFactory extends ChildFactory<String> {
+public class DocumentChildFactory extends ChildFactory<String> {
 
     @Override
     protected boolean createKeys(List<String> list) {
@@ -21,9 +21,9 @@ public class Level3ChildFactory extends ChildFactory<String> {
 
     @Override
     protected Node createNodeForKey(String key) {
-        Level3Node node = null;
+        DocumentNode node = null;
         try {
-            node = new Level3Node(key);
+            node = new DocumentNode(key);
         } catch (IntrospectionException ex) {
             Exceptions.printStackTrace(ex);
         }

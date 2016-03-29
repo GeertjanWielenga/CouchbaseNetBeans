@@ -1,6 +1,6 @@
 package com.mycompany.snhfc;
 
-import com.mycompany.snhfc.level1.Level1ChildFactory;
+import com.mycompany.snhfc.level1.ConnectionChildFactory;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import org.openide.util.*;
 import org.openide.util.actions.SystemAction;
 import org.openide.util.datatransfer.NewType;
 
-@NbBundle.Messages("CTL_DisplayName=Root")
+@NbBundle.Messages("CTL_DisplayName=Couchbase")
 public class RootNode extends AbstractNode {
 
     @StaticResource
@@ -33,7 +33,7 @@ public class RootNode extends AbstractNode {
     }
 
     public RootNode() {
-        super(Children.create(new Level1ChildFactory(), true));
+        super(Children.create(new ConnectionChildFactory(), true));
         setDisplayName(Bundle.CTL_DisplayName());
         setIconBaseWithExtension(ICON);
     }

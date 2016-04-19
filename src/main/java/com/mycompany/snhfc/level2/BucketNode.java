@@ -1,6 +1,7 @@
 package com.mycompany.snhfc.level2;
 
 import com.couchbase.client.java.Bucket;
+import com.mycompany.snhfc.level3.DocumentChildFactory;
 import java.beans.IntrospectionException;
 import javax.swing.Action;
 import org.netbeans.api.annotations.common.StaticResource;
@@ -13,7 +14,7 @@ public class BucketNode extends BeanNode {
     private static final String ICON = "com/mycompany/snhfc/level2/icon.png";
 
     public BucketNode(Bucket bucket) throws IntrospectionException {
-        super(bucket, Children.LEAF);
+        super(bucket, Children.create(new DocumentChildFactory(bucket), true));
         setDisplayName(bucket.name());
         setIconBaseWithExtension(ICON);
     }

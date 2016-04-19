@@ -24,7 +24,7 @@ public class BucketChildFactory extends ChildFactory<Bucket> {
 
     @Override
     protected boolean createKeys(List<Bucket> list) {
-        String msg = "Processing Level 2...";
+        String msg = "Processing buckets...";
         ProgressHandle handle = ProgressHandleFactory.createSystemHandle(msg);
         handle.start();
         String login = NbPreferences.forModule(RootNode.class).get("serverLogin", "error!");

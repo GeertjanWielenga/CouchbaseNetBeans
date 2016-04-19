@@ -51,7 +51,7 @@ public class RootNode extends AbstractNode {
     }
 
     @NbBundle.Messages({
-        "LBL_Title=Database Server..."})
+        "LBL_Title=Couchbase Node..."})
     @Override
     public NewType[] getNewTypes() {
         return new NewType[]{
